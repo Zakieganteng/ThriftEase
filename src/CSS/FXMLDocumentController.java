@@ -47,7 +47,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void keHalaman2(ActionEvent event) {
         OpenScene object=new OpenScene();
-        Pane halaman=object.getPane("");
+        Pane halaman=object.getPane("keranjang/Shirt");
         MenShow.getChildren().setAll(halaman);
     }
     

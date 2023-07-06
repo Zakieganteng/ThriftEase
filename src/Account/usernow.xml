@@ -1,8 +1,1 @@
-<?xml version="1.0"?>
-<AccountInfo>
-    <Database.Akun>
-        <nama>zakie2</nama>
-        <password>zakie2</password>
-        <email>zakie@gmail.com</email>
-    </Database.Akun>
-</AccountInfo>
+<?xml version="1.0" ?><AccountInfo><Database.Akun><nama>zakie</nama><password>zakie</password></Database.Akun></AccountInfo>

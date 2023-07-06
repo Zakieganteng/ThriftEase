@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Beranda.BerandaController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Beranda.BerandaController">
    <children>
       <ScrollPane fx:id="beranda" prefHeight="740.0" prefWidth="1150.0">
         <content>
@@ -709,9 +709,9 @@
                               <Insets left="155.0" />
                            </GridPane.margin>
                         </Label>
-                        <Button mnemonicParsing="false" opacity="0.0" prefHeight="218.0" prefWidth="308.0" styleClass="Buttonblabla" stylesheets="@beranda.css" />
-                        <Button mnemonicParsing="false" opacity="0.0" prefHeight="217.0" prefWidth="299.0" styleClass="Buttonblabla" stylesheets="@beranda.css" GridPane.columnIndex="1" />
-                        <Button mnemonicParsing="false" opacity="0.0" prefHeight="206.0" prefWidth="299.0" styleClass="Buttonblabla" stylesheets="@beranda.css" GridPane.columnIndex="2" />
+                        <Button fx:id="buttonshirt00" mnemonicParsing="false" onAction="#buttonshirt00" opacity="0.0" prefHeight="218.0" prefWidth="308.0" styleClass="Buttonblabla" stylesheets="@beranda.css" />
+                        <Button fx:id="buttonshirt10" mnemonicParsing="false" onAction="#buttonshirt10" opacity="0.0" prefHeight="217.0" prefWidth="299.0" styleClass="Buttonblabla" stylesheets="@beranda.css" GridPane.columnIndex="1" />
+                        <Button fx:id="buttonshirt20" mnemonicParsing="false" onAction="#buttonshirt20" opacity="0.0" prefHeight="206.0" prefWidth="299.0" styleClass="Buttonblabla" stylesheets="@beranda.css" GridPane.columnIndex="2" />
                         <Button mnemonicParsing="false" opacity="0.0" prefHeight="210.0" prefWidth="297.0" styleClass="Buttonblabla" stylesheets="@beranda.css" GridPane.rowIndex="1" />
                         <Button mnemonicParsing="false" opacity="0.0" prefHeight="225.0" prefWidth="307.0" styleClass="Buttonblabla" stylesheets="@beranda.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <Button mnemonicParsing="false" opacity="0.0" prefHeight="209.0" prefWidth="305.0" styleClass="Buttonblabla" stylesheets="@beranda.css" GridPane.columnIndex="2" GridPane.rowIndex="1" />
