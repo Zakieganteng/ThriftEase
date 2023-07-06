@@ -62,6 +62,7 @@ public class Signuppagecontroller implements Initializable {
             showwarnnotcomp.setVisible(false);
             mosignup.setNama(newuserrname.getText());
             mosignup.setPassword(newpassword.getText());
+            mosignup.setEmail(email.getText());
             productifseller.getThriftEaseAccounts().add(mosignup);
     
             xmlupdate();
