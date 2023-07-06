@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="1160.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HalamanLogin.loginpagecontroller">
+   <children>
+      <Button layoutX="58.0" layoutY="174.0" mnemonicParsing="false" onAction="#keHalamanLogin" prefHeight="158.0" prefWidth="198.0" style="-fx-background-color: white;" text="&#10;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="112.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../4608de3c99e46626469c7be41fbc62e1.jpg" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="324.0" layoutY="174.0" mnemonicParsing="false" onAction="#keHalamanSignup" prefHeight="101.0" prefWidth="97.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../industrial-cybersecurity-abstract-concept-illustration_335657-2160.jpg" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="561.0" layoutY="174.0" mnemonicParsing="false" onAction="#keHalamanProfile" prefHeight="158.0" prefWidth="158.0" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="128.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../a0d0ff114b7deada4508695691c60b16.jpg" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="360.0" layoutY="347.0" text="Sign up Account">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="111.0" layoutY="347.0" text="Log in Acccount">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="595.0" layoutY="347.0" text="Profile Account">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="40.0" text="Account">
+         <font>
+            <Font name="Bell MT Bold" size="43.0" />
+         </font>
+      </Label>
+      <TextField layoutX="369.0" layoutY="54.0" prefHeight="29.0" prefWidth="198.0" promptText="What you wanna do?" />
+   </children>
+</AnchorPane>

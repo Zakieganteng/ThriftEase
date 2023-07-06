@@ -1,0 +1,15 @@
+.iklanbutton{
+    -fx-background-color: linear-gradient(to right, #000000 10.6%, #b60000 45.7%, #000000 93.4%);
+}
+
+.Buttonblabla{
+    -fx-cursor: hand;
+    -fx-opaacity: 1;
+    -fx-background-color:white;
+}
+
+
+.Buttonblabla:hover{
+    -fx-opacity: 0.5;
+    -fx-background-color:grey;
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1280.0" stylesheets="@tampilan.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CSS.FXMLDocumentController">
+   <children>
+      <BorderPane fx:id="mainPane" layoutX="72.0" layoutY="56.0" prefHeight="512.0" prefWidth="584.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="651.0" prefWidth="137.0" style="-fx-background-color: #4A0501;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#keHalaman1" prefHeight="56.0" prefWidth="78.0" style="-fx-background-color: white;" text="🏠&#10;&#10;">
+                     <VBox.margin>
+                        <Insets left="30.0" top="80.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#keHalaman2" prefHeight="56.0" prefWidth="78.0" style="-fx-background-color: white;" text="🛒" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#keHalaman3" prefHeight="56.0" prefWidth="78.0" style="-fx-background-color: white;" text="💬" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#keHalaman4" prefHeight="56.0" prefWidth="78.0" style="-fx-background-color: white;" text="👤">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="230.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <AnchorPane prefHeight="54.0" prefWidth="1345.0" style="-fx-background-color: #4A0501;" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField layoutX="1003.0" layoutY="13.0" prefHeight="28.0" prefWidth="266.0" promptText="Temukan Pakaian Impianmu 🌟                     🔍" />
+                  <Label layoutX="25.0" layoutY="4.0" prefHeight="35.0" prefWidth="169.0" text="ThriftEase" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane fx:id="MenShow" prefHeight="740.0" prefWidth="1160.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="740.0" fitWidth="1160.0" layoutX="-3.0" layoutY="-1.0" opacity="0.12" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Foto-Foto/987d4333b0e6bf36ff12b4e82755aadc.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="495.0" layoutY="267.0" opacity="0.3" prefHeight="118.0" prefWidth="164.0" text="Welcome to&#10;ThriftEase" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
