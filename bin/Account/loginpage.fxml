@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.FXMLDocumentControllerAkun">
+<AnchorPane prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.FXMLDocumentControllerAkun">
    <children>
       <ImageView fitHeight="721.0" fitWidth="1307.0" opacity="0.12" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -62,6 +62,8 @@
                   </Button>
                   <Label fx:id="wrongUN" layoutX="161.0" layoutY="255.0" prefHeight="17.0" prefWidth="148.0" />
                   <Label fx:id="wrongPass" layoutX="161.0" layoutY="301.0" prefHeight="17.0" prefWidth="148.0" />
+                  <Label fx:id="showwarnpass" layoutX="160.0" layoutY="301.0" text="*Password anda salah" visible="false" />
+                  <Label fx:id="showwarnuser" layoutX="160.0" layoutY="255.0" text="*Akun tidak ditemukan" visible="false" />
                </children>
             </AnchorPane>
          </center>

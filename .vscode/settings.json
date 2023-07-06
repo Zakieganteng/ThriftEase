@@ -3,6 +3,7 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "c:\\Users\\Muhammad Zakie\\Documents\\FPA\\XML\\xstream-1.4.20.jar"
+        "c:\\Users\\Muhammad Zakie\\Documents\\FPA\\XML\\xstream-1.4.20.jar",
+        "c:\\Users\\Lenovo\\Downloads\\xstream-1.4.20.jar"
     ]
 }

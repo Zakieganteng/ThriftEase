@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HalamanSignup.Signuppagecontroller">
+<AnchorPane prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HalamanSignup.Signuppagecontroller">
    <children>
       <ImageView fitHeight="745.0" fitWidth="1303.0" opacity="0.12" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -51,20 +51,25 @@
                         <Image url="@../Foto-Foto/4c66156ccdbb5e752cdffc6d85fcdea5.jpg" />
                      </image>
                   </ImageView>
-                  <TextField layoutX="74.0" layoutY="299.0" promptText="Email Addres" />
+                  <TextField fx:id="email" layoutX="74.0" layoutY="299.0" promptText="Email Addres" />
                   <Label layoutX="41.0" layoutY="200.0" prefHeight="54.0" prefWidth="216.0" text="Create Account">
                      <font>
                         <Font name="Century Schoolbook Bold" size="26.0" />
                      </font>
                   </Label>
-                  <PasswordField layoutX="75.0" layoutY="418.0" promptText="New Password" />
-                  <PasswordField layoutX="75.0" layoutY="453.0" promptText="Confirm Password" />
-                  <TextField layoutX="74.0" layoutY="358.0" promptText="New Username" />
-                  <Button layoutX="107.0" layoutY="515.0" mnemonicParsing="false" onAction="#keHalamanUtama" prefHeight="19.0" prefWidth="85.0" style="-fx-background-color: #4A0501;" text="Sign Up" textFill="WHITE">
+                  <PasswordField fx:id="newpassword" layoutX="75.0" layoutY="418.0" promptText="New Password" />
+                  <PasswordField fx:id="finalpassword" layoutX="75.0" layoutY="453.0" promptText="Confirm Password" />
+                  <TextField fx:id="newuserrname" layoutX="74.0" layoutY="358.0" promptText="New Username" />
+                  <Button layoutX="107.0" layoutY="515.0" mnemonicParsing="false" onAction="#signup" prefHeight="19.0" prefWidth="85.0" style="-fx-background-color: #4A0501;" text="Sign Up" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
+                  <Label fx:id="showwarnnotcomp" layoutX="79.0" layoutY="257.0" text="*Harap Isi semua Data " visible="false">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </center>
