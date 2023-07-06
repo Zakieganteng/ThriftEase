@@ -1,6 +1,8 @@
 package Account;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -54,6 +56,7 @@ public ImageView potologo;
     @FXML
     private TextField username;
 
+    Akun usernowbanget = new Akun();
     AllAkun productifseller = new AllAkun();
     @FXML
     private void updatebarang() {
@@ -108,6 +111,12 @@ public void LoginButton(ActionEvent event) throws Exception {
             if (username.getText().equals(productifseller.getThriftEaseAccounts().get(index).getNama())) {
       
                   if (password.getText().equals((productifseller.getThriftEaseAccounts().get(index).getPassword()))) {
+
+                    usernowbanget = productifseller.getThriftEaseAccounts().get(index);
+
+
+                    updateusernow();
+                    
                         
                         root = FXMLLoader.load(getClass().getClassLoader().getResource("CSS/FXMLDocument.fxml"));
                               stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -135,6 +144,46 @@ public void SignupButton(ActionEvent event) throws Exception {
        stage.show();
 
 }
+
+@FXML
+    private void updateusernow() {
+
+        XStream xstream = new XStream(new StaxDriver());
+       xstream.processAnnotations(Akun.class);
+        xstream.processAnnotations(AllAkun.class);
+
+       
+        AllAkun datain = new AllAkun();
+
+        datain.getThriftEaseAccounts().add(usernowbanget);
+
+
+
+
+        String xml = xstream.toXML(datain);
+        FileOutputStream myFile = null;
+        try {
+            String folderPath = "src\\Account";
+                String fileName = "usernow.xml";
+                String filePath = folderPath + File.separator + fileName;
+            myFile = new FileOutputStream(filePath);
+            byte[] bytes = xml.getBytes("UTF-8");
+            myFile.write(bytes);
+        } catch (Exception e) {
+            System.err.println("Perhatian: " + e.getMessage());
+        } finally {
+            if (myFile != null) {
+                try {
+                    myFile.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        
+        
+    }
 
 
 @FXML

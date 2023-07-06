@@ -1,5 +1,16 @@
 {
+<<<<<<< HEAD
   "java.project.sourcePaths": ["src"],
   "java.project.outputPath": "bin",
   "java.project.referencedLibraries": ["lib/**/*.jar", "c:\\Users\\Muhammad Zakie\\Documents\\FPA\\XML\\xstream-1.4.20.jar", "c:\\Users\\Lenovo\\Downloads\\xstream-1.4.20.jar", "c:\\Users\\ASUS\\Downloads\\xstream-1.4.20.jar"]
+=======
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\Muhammad Zakie\\Documents\\FPA\\XML\\xstream-1.4.20.jar",
+        "c:\\Users\\Lenovo\\Downloads\\xstream-1.4.20.jar",
+        "d:\\Coding\\XSTREAM\\xstream-1.4.20.jar"
+    ]
+>>>>>>> da9ceb30f852aab0fbfa1c485e0ecbd6a84a8bd6
 }
