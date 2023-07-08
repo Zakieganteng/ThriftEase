@@ -6,6 +6,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.ResourceBundle;
 
 import com.thoughtworks.xstream.XStream;
@@ -324,9 +326,21 @@ public class BerandaController implements Initializable{
                 int roindexnew = 0;
                 int coindexnew = 0;
                 // datagridnew.add(new ArrayList<>());
-        
-                for (int i = 0 ; i < barangshirt.getThriftEaseBarang().size(); i++) {
 
+                
+                HashSet<Integer> generatedNumbers = new LinkedHashSet<>();
+                int min = 0;
+                int max = barangshirt.getThriftEaseBarang().size()-1;
+
+                // harus di perbaiki ketika barang sudah mencapai angka lebih dari 30 barang yang ada pada getrefood
+                int jumlahonothers = 12;
+    
+                while (generatedNumbers.size() < 12) {
+                    int randomNumber = (int) (Math.random() * (max - min + 1)) + min;
+                    generatedNumbers.add(randomNumber);
+                }
+    
+                for (int i : generatedNumbers) {
 
                     if (barangshirt.getThriftEaseBarang().get(i).getKategoriBarang().equals("Shirt")) {
 
@@ -360,12 +374,6 @@ public class BerandaController implements Initializable{
     
                     
                         // datagridnew.get(0).add(barangdatashow.getRefoodBarang().get(i));
-    
-    
-    
-                        
-        
-        
                         coindexnew++;
     
                         if (coindexnew > 2) {

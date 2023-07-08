@@ -2,12 +2,20 @@ package Database;
 
 public class Barang {
 
+    private String pathpict;
+
     private Boolean keranjang;
     public Boolean getKeranjang() {
         return keranjang;
     }
     public void setKeranjang(Boolean keranjang) {
         this.keranjang = keranjang;
+    }
+    public String getPathpict() {
+        return pathpict;
+    }
+    public void setPathpict(String pathpict) {
+        this.pathpict = pathpict;
     }
     private String KategoriBarang;
     private String namaBarang;
