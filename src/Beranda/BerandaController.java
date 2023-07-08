@@ -35,7 +35,7 @@ import javafx.scene.layout.Pane;
 public class BerandaController implements Initializable{
 
     @FXML
-    private GridPane ShirtGrid;
+    private GridPane ShirtGrid,gridsweater;
 
     @FXML
     private Button buttonshirt00;
@@ -318,81 +318,119 @@ public class BerandaController implements Initializable{
 
 
 
-    
- @Override
+    @Override
     public void initialize(URL url, ResourceBundle rb) {
         updatebarang();
-
-         try {
-                int roindexnew = 0;
-                int coindexnew = 0;
-                // datagridnew.add(new ArrayList<>());
-
-                
-                HashSet<Integer> generatedNumbers = new LinkedHashSet<>();
-                int min = 0;
-                int max = barangshirt.getThriftEaseBarang().size()-1;
-
-                // harus di perbaiki ketika barang sudah mencapai angka lebih dari 30 barang yang ada pada getrefood
-                int jumlahonothers = 12;
     
-                while (generatedNumbers.size() < 12) {
-                    int randomNumber = (int) (Math.random() * (max - min + 1)) + min;
+        try {
+            int roindexnew = 0;
+            int coindexnew = 0;
+            HashSet<Integer> generatedNumbers = new LinkedHashSet<>();
+            int min = 0;
+            int max = barangshirt.getThriftEaseBarang().size() - 1;
+            int jumlahonothers = 12;
+    
+            while (generatedNumbers.size() < 12) {
+                int randomNumber = (int) (Math.random() * (max - min + 1)) + min;
+    
+                if (barangshirt.getThriftEaseBarang().get(randomNumber).getKategoriBarang().equals("Shirt")) {
                     generatedNumbers.add(randomNumber);
                 }
-    
-                for (int i : generatedNumbers) {
-
-                    if (barangshirt.getThriftEaseBarang().get(i).getKategoriBarang().equals("Shirt")) {
-
-                        final int index = i;
-                        
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("Display/display.fxml"));
-                        AnchorPane item = loader.load();
-            
-                        // Set different text for each label
-                        Label nameLabel = (Label) item.lookup("#NamaShirt");
-                        nameLabel.setText(barangshirt.getThriftEaseBarang().get(i).getNamaBarang());
-            
-                        Label banyakPenjualanLabel = (Label) item.lookup("#KualitasShirt");
-                        banyakPenjualanLabel.setText( barangshirt.getThriftEaseBarang().get(i).getKondisiBarang());
-                        Label Penjual = (Label) item.lookup("#HargaShirt");
-                        Penjual.setText( barangshirt.getThriftEaseBarang().get(i).getHargaBarang());
-
-                        Button keranjang = (Button) item.lookup("#masukKeranjang");
-
-                        keranjang.setOnAction(event -> {
-                            System.out.println(nameLabel.getText());;
-                            barangshirt.getThriftEaseBarang().get(index).setKeranjang(true);
-                            xmlupdate();
-                        });
-        
-                        ImageView imageView = (ImageView) item.lookup("#gambarproduct");
-                        Image image = new Image(getClass().getClassLoader().getResourceAsStream(barangshirt.getThriftEaseBarang().get(i).getPathpict()));
-                        imageView.setImage(image);
-            
-                        ShirtGrid.add(item, coindexnew, roindexnew);
-    
-                    
-                        // datagridnew.get(0).add(barangdatashow.getRefoodBarang().get(i));
-                        coindexnew++;
-    
-                        if (coindexnew > 2) {
-                            roindexnew++;
-                            coindexnew = 0;
-                            
-                        }
-                        // coindex++;
-                    }
-                    
-        
-                    
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-                System.out.println("salah disini dapa");
             }
-        
-       
-    }    
+    
+            for (int i : generatedNumbers) {
+                final int index = i;
+    
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Display/display.fxml"));
+                AnchorPane item = loader.load();
+    
+                Label nameLabel = (Label) item.lookup("#NamaShirt");
+                nameLabel.setText(barangshirt.getThriftEaseBarang().get(i).getNamaBarang());
+    
+                Label banyakPenjualanLabel = (Label) item.lookup("#KualitasShirt");
+                banyakPenjualanLabel.setText(barangshirt.getThriftEaseBarang().get(i).getKondisiBarang());
+    
+                Label Penjual = (Label) item.lookup("#HargaShirt");
+                Penjual.setText(barangshirt.getThriftEaseBarang().get(i).getHargaBarang());
+    
+                Button keranjang = (Button) item.lookup("#masukKeranjang");
+                keranjang.setOnAction(event -> {
+                    System.out.println(nameLabel.getText());
+                    barangshirt.getThriftEaseBarang().get(index).setKeranjang(true);
+                    xmlupdate();
+                });
+    
+                ImageView imageView = (ImageView) item.lookup("#gambarproduct");
+                Image image = new Image(getClass().getClassLoader().getResourceAsStream(
+                        barangshirt.getThriftEaseBarang().get(i).getPathpict()));
+                imageView.setImage(image);
+    
+                ShirtGrid.add(item, coindexnew, roindexnew);
+                coindexnew++;
+    
+                if (coindexnew > 2) {
+                    roindexnew++;
+                    coindexnew = 0;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error occurred while loading shirts.");
+        }
+    
+        try {
+            int roindex = 0;
+            int coindex = 0;
+            HashSet<Integer> generatedNumbers2 = new LinkedHashSet<>();
+            int min = 0;
+            int max = barangshirt.getThriftEaseBarang().size() - 1;
+    
+            while (generatedNumbers2.size() < 12) {
+                int randomNumber = (int) (Math.random() * (max - min + 1)) + min;
+    
+                if (barangshirt.getThriftEaseBarang().get(randomNumber).getKategoriBarang().equals("Sweater")) {
+                    generatedNumbers2.add(randomNumber);
+                }
+            }
+    
+            for (int i : generatedNumbers2) {
+                final int index = i;
+    
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Display/display.fxml"));
+                AnchorPane item = loader.load();
+    
+                Label nameLabel = (Label) item.lookup("#NamaShirt");
+                nameLabel.setText(barangshirt.getThriftEaseBarang().get(i).getNamaBarang());
+    
+                Label banyakPenjualanLabel = (Label) item.lookup("#KualitasShirt");
+                banyakPenjualanLabel.setText(barangshirt.getThriftEaseBarang().get(i).getKondisiBarang());
+    
+                Label Penjual = (Label) item.lookup("#HargaShirt");
+                Penjual.setText(barangshirt.getThriftEaseBarang().get(i).getHargaBarang());
+    
+                Button keranjang = (Button) item.lookup("#masukKeranjang");
+                keranjang.setOnAction(event -> {
+                    System.out.println(nameLabel.getText());
+                    barangshirt.getThriftEaseBarang().get(index).setKeranjang(true);
+                    xmlupdate();
+                });
+    
+                ImageView imageView = (ImageView) item.lookup("#gambarproduct");
+                Image image = new Image(getClass().getClassLoader().getResourceAsStream(
+                        barangshirt.getThriftEaseBarang().get(i).getPathpict()));
+                imageView.setImage(image);
+    
+                gridsweater.add(item, coindex, roindex);
+                coindex++;
+    
+                if (coindex > 2) {
+                    roindex++;
+                    coindex = 0;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error occurred while loading sweaters.");
+        }
+    }
 }
