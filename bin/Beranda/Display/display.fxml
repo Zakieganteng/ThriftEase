@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -23,5 +24,6 @@
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
+      <ImageView fx:id="gambarproduct" fitHeight="173.0" fitWidth="129.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

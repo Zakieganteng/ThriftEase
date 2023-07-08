@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <AccountInfo>
     <Database.Barang>
+        <pathpict>Foto-Foto/shirt/SH1.png</pathpict>
         <keranjang>true</keranjang>
         <KategoriBarang>Shirt</KategoriBarang>
         <namaBarang>Backhit Holy Land</namaBarang>
@@ -8,6 +9,7 @@
         <hargaBarang>Rp 130.000</hargaBarang>
     </Database.Barang>
     <Database.Barang>
+        <pathpict>Foto-Foto/shirt/SH2.png</pathpict>
         <keranjang>true</keranjang>
         <KategoriBarang>Shirt</KategoriBarang>
         <namaBarang>Backhit Tshirts</namaBarang>
@@ -15,6 +17,7 @@
         <hargaBarang>Rp 145.000</hargaBarang>
     </Database.Barang>
     <Database.Barang>
+        <pathpict>Foto-Foto/shirt/SH3.png</pathpict>
         <keranjang>false</keranjang>
         <KategoriBarang>Shirt</KategoriBarang>
         <namaBarang>Backhit Nasa</namaBarang>
@@ -22,6 +25,7 @@
         <hargaBarang>Rp 100.000</hargaBarang>
     </Database.Barang>
     <Database.Barang>
+        <pathpict>Foto-Foto/shirt/SH4.png</pathpict>
         <keranjang>false</keranjang>
         <KategoriBarang>Shirt</KategoriBarang>
         <namaBarang>Backhit Canterburry</namaBarang>
@@ -29,6 +33,7 @@
         <hargaBarang>Rp 125.000</hargaBarang>
     </Database.Barang>
     <Database.Barang>
+        <pathpict>Foto-Foto/shirt/SH5.png</pathpict>
         <keranjang>false</keranjang>
         <KategoriBarang>Shirt</KategoriBarang>
         <namaBarang>Backhit Tshirt Skull</namaBarang>
@@ -36,6 +41,7 @@
         <hargaBarang>Rp 134.000</hargaBarang>
     </Database.Barang>
     <Database.Barang>
+        <pathpict>Foto-Foto/shirt/SH6.png</pathpict>
         <keranjang>false</keranjang>
         <KategoriBarang>Shirt</KategoriBarang>
         <namaBarang>Backhit eagle Demo</namaBarang>
@@ -43,6 +49,7 @@
         <hargaBarang>Rp 150.000</hargaBarang>
     </Database.Barang>
     <Database.Barang>
+        <pathpict>Foto-Foto/shirt/SH7.png</pathpict>
         <keranjang>true</keranjang>
         <KategoriBarang>Shirt</KategoriBarang>
         <namaBarang>Backhit Sakurajima</namaBarang>
@@ -50,6 +57,7 @@
         <hargaBarang>Rp 112.000</hargaBarang>
     </Database.Barang>
     <Database.Barang>
+        <pathpict>Foto-Foto/shirt/SH8.png</pathpict>
         <keranjang>false</keranjang>
         <KategoriBarang>Shirt</KategoriBarang>
         <namaBarang>white grey shirt</namaBarang>
@@ -57,6 +65,7 @@
         <hargaBarang>Rp 165.000</hargaBarang>
     </Database.Barang>
     <Database.Barang>
+        <pathpict>Foto-Foto/shirt/SH9.png</pathpict>
         <keranjang>false</keranjang>
         <KategoriBarang>Shirt</KategoriBarang>
         <namaBarang>gold white shirt</namaBarang>
@@ -64,6 +73,7 @@
         <hargaBarang>Rp 100.000</hargaBarang>
     </Database.Barang>
     <Database.Barang>
+        <pathpict>Foto-Foto/shirt/SH10.png</pathpict>
         <keranjang>false</keranjang>
         <KategoriBarang>Shirt</KategoriBarang>
         <namaBarang>yellow white shirt</namaBarang>
@@ -71,6 +81,7 @@
         <hargaBarang>Rp 100.000</hargaBarang>
     </Database.Barang>
     <Database.Barang>
+        <pathpict>Foto-Foto/shirt/SH11.png</pathpict>
         <keranjang>false</keranjang>
         <KategoriBarang>Shirt</KategoriBarang>
         <namaBarang>blue white shirt</namaBarang>
@@ -78,6 +89,7 @@
         <hargaBarang>Rp 156.000</hargaBarang>
     </Database.Barang>
     <Database.Barang>
+        <pathpict>Foto-Foto/shirt/SH12.png</pathpict>
         <keranjang>false</keranjang>
         <KategoriBarang>Shirt</KategoriBarang>
         <namaBarang>three color shirt</namaBarang>
@@ -85,10 +97,11 @@
         <hargaBarang>Rp 160.000</hargaBarang>
     </Database.Barang>
     <Database.Barang>
-        <keranjang>true</keranjang>
+        <pathpict>Foto-Foto/shirt/SH13.png</pathpict>
+        <keranjang>false</keranjang>
         <KategoriBarang>Shirt</KategoriBarang>
-        <namaBarang>Baju Gapapa</namaBarang>
-        <kondisiBarang>Very Good</kondisiBarang>
-        <hargaBarang>Rp. 800000</hargaBarang>
+        <namaBarang>Baju x_x</namaBarang>
+        <kondisiBarang>Wellcondition</kondisiBarang>
+        <hargaBarang>Rp. 120.000</hargaBarang>
     </Database.Barang>
 </AccountInfo>

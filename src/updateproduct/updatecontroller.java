@@ -23,6 +23,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 public class updatecontroller implements Initializable {
 
         @FXML
@@ -64,10 +68,12 @@ public class updatecontroller implements Initializable {
         Barang tambahnew = new Barang();
         tambahnew.setNamaBarang(name.getText());
 
-        tambahnew.setKondisiBarang(kondisi.getValue());
+        tambahnew.setKondisiBarang(kondisi.getValue()+ "condition");
         tambahnew.setKategoriBarang(categ);
         tambahnew.setKeranjang(false);
         tambahnew.setHargaBarang("Rp. " + price.getText());
+
+        tambahnew.setPathpict(URL.getText());
 
         barang.getThriftEaseBarang().add(tambahnew);
 
@@ -77,6 +83,34 @@ public class updatecontroller implements Initializable {
         // int panjang = kateg.length();
         // System.out.println(kateg);
     }
+
+    @FXML
+    private TextField URL;
+
+    @FXML
+    private ImageView fotoproduk;
+
+    @FXML
+    private Button addimage;
+
+
+      @FXML
+    private void handleChooseImage() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Choose Image File");
+        fileChooser.setInitialDirectory(new File("src/Foto-Foto"));
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif"));
+        File selectedFile = fileChooser.showOpenDialog(new Stage());
+        if (selectedFile != null) {
+            Image image = new Image(selectedFile.toURI().toString());
+            fotoproduk.setImage(image);
+            
+            URL.setText(selectedFile.getPath());
+        }
+    }
+
+    
 
     String categ = "";
     @FXML
@@ -191,5 +225,6 @@ public class updatecontroller implements Initializable {
         updatebarang();
 
         kondisi.getItems().addAll("Very Good","Good","Well");
+        URL.setDisable(true);
     }
 }

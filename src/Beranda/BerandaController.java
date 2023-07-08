@@ -26,6 +26,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -366,9 +367,9 @@ public class BerandaController implements Initializable{
                             xmlupdate();
                         });
         
-                        // ImageView imageView = (ImageView) item.lookup("#imageproduct");
-                        // Image image = new Image(getClass().getClassLoader().getResourceAsStream(barangdatashow.getRefoodBarang().get(i).getFotoproduk()));
-                        // imageView.setImage(image);
+                        ImageView imageView = (ImageView) item.lookup("#gambarproduct");
+                        Image image = new Image(getClass().getClassLoader().getResourceAsStream(barangshirt.getThriftEaseBarang().get(i).getPathpict()));
+                        imageView.setImage(image);
             
                         ShirtGrid.add(item, coindexnew, roindexnew);
     

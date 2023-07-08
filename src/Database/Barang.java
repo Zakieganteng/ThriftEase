@@ -15,7 +15,10 @@ public class Barang {
         return pathpict;
     }
     public void setPathpict(String pathpict) {
-        this.pathpict = pathpict;
+
+        String pathremove = removePrefix(pathpict);
+        String path = replaceBackslashes(pathremove);
+        this.pathpict = path;
     }
     private String KategoriBarang;
     private String namaBarang;
@@ -45,5 +48,21 @@ public class Barang {
     public void setHargaBarang(String hargaBarang) {
         this.hargaBarang = hargaBarang;
     }
+
+    public String replaceBackslashes(String input) {
+        return input.replace("\\", "/");
+    }
+
+    public String removePrefix(String input) {
+        String databasePrefix = "Foto-Foto\\";
+        int prefixIndex = input.indexOf(databasePrefix);
+
+        if (prefixIndex != -1) {
+            return input.substring(prefixIndex);
+        }
+
+        return input;
+    }
+
     
 }
