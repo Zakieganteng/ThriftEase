@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,36 +18,66 @@
             <Image url="@../../../../Project%20Besar%20FPA/src/Foto-Foto/987d4333b0e6bf36ff12b4e82755aadc.jpg" />
          </image>
       </ImageView>
-      <RadioButton layoutX="733.0" layoutY="336.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Shirt">
+      <RadioButton fx:id="RBshirt" layoutX="719.0" layoutY="360.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Shirt">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="category" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="RBsweater" layoutX="719.0" layoutY="399.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Sweater" toggleGroup="$category">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="733.0" layoutY="375.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Sweater">
+      <RadioButton fx:id="RBjacket" layoutX="719.0" layoutY="440.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Jacket" toggleGroup="$category">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="733.0" layoutY="416.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Jacket">
+      <RadioButton fx:id="RBskirt" layoutX="870.0" layoutY="440.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Skirt" toggleGroup="$category">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="884.0" layoutY="416.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Skirt">
+      <RadioButton fx:id="RBlongpants" layoutX="870.0" layoutY="400.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Long Pants" toggleGroup="$category">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="884.0" layoutY="376.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Long Pants">
+      <RadioButton fx:id="RBshortpants" layoutX="870.0" layoutY="360.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Short Pants" toggleGroup="$category">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="884.0" layoutY="336.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Short Pants">
+      <Label layoutX="793.0" layoutY="311.0" prefHeight="30.0" prefWidth="142.0" text="Category" textAlignment="CENTER">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
-      </RadioButton>
-      <Label layoutX="787.0" layoutY="287.0" prefHeight="30.0" prefWidth="142.0" text="Category" textAlignment="CENTER" />
+      </Label>
+      <TextField fx:id="name" layoutX="203.0" layoutY="161.0" prefHeight="36.0" prefWidth="241.0" />
+      <TextField fx:id="price" layoutX="203.0" layoutY="351.0" prefHeight="36.0" prefWidth="241.0" />
+      <ChoiceBox fx:id="kondisi" layoutX="727.0" layoutY="161.0" prefHeight="36.0" prefWidth="241.0" />
+      <Button fx:id="add" layoutX="472.0" layoutY="549.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="203.0" text="Add Product">
+         <font>
+            <Font name="Bell MT Bold" size="22.0" />
+         </font>
+      </Button>
+      <Label layoutX="205.0" layoutY="122.0" prefHeight="30.0" prefWidth="231.0" text="Name of your product" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="205.0" layoutY="311.0" prefHeight="30.0" prefWidth="162.0" text="Drop your price" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="729.0" layoutY="120.0" prefHeight="30.0" prefWidth="267.0" text="Condition of your product" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
