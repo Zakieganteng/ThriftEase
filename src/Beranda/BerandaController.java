@@ -38,47 +38,6 @@ public class BerandaController implements Initializable{
     private Button buttonshirt00;
 
     @FXML
-    private void buttonshirt00(){
-        Barang newlist = new Barang();
-
-        newlist.setNamaBarang("Backhit Holy Land");
-        newlist.setKondisiBarang("Very Good Condition");
-
-        newlist.setHargaBarang("Rp 130.000");
-
-        productifseller.getThriftEaseBarang().add(newlist);
-
-        xmlupdate();
-
-    }
-    @FXML
-    private void buttonshirt10(){
-        Barang newlist = new Barang();
-
-        newlist.setNamaBarang("Backhit Tshirts");
-        newlist.setKondisiBarang("Very Good Condition");
-
-        newlist.setHargaBarang("Rp 145.000");
-
-        productifseller.getThriftEaseBarang().add(newlist);
-        xmlupdate();
-
-    }
-    @FXML
-    private void buttonshirt20(){
-        Barang newlist = new Barang();
-
-        newlist.setNamaBarang("Backhit Nasa");
-        newlist.setKondisiBarang("Good Condition");
-
-        newlist.setHargaBarang("Rp 100.000");
-
-        productifseller.getThriftEaseBarang().add(newlist);
-        xmlupdate();
-
-    }
-
-    @FXML
     private Button buttonshirt10;
 
     @FXML
