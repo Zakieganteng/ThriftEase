@@ -45,12 +45,39 @@ public class shirt implements Initializable {
     private ObservableList<Shirts> data = FXCollections.observableArrayList(
     );
 
+    @FXML
+    private void deleteRow() {
+        Shirts selectedShirt = keranjanglist.getSelectionModel().getSelectedItem();
+
+        if (selectedShirt != null) {
+            data.remove(selectedShirt);
+
+            for (int i = 0; i < productifseller.getThriftEaseBarang().size(); i++) {
+
+            if (productifseller.getThriftEaseBarang().get(i).getNamaBarang().equals(selectedShirt.getNamaBarang())) {
+                
+                productifseller.getThriftEaseBarang().get(i).setKeranjang(false);
+                xmlupdate();
+            }
+            
+        }
+
+            
+
+            
+        }
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         updatebarang();
 
         for (int i = 0; i < productifseller.getThriftEaseBarang().size(); i++) {
-            data.add(new Shirts(productifseller.getThriftEaseBarang().get(i).getNamaBarang(), productifseller.getThriftEaseBarang().get(i).getKondisiBarang(), productifseller.getThriftEaseBarang().get(i).getHargaBarang()));
+
+            if (productifseller.getThriftEaseBarang().get(i).getKeranjang()) {
+                
+                data.add(new Shirts(productifseller.getThriftEaseBarang().get(i).getNamaBarang(), productifseller.getThriftEaseBarang().get(i).getKondisiBarang(), productifseller.getThriftEaseBarang().get(i).getHargaBarang()));
+            }
             
         }
         // Set up the cell value factories for each column

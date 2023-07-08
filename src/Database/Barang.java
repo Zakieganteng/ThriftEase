@@ -2,7 +2,21 @@ package Database;
 
 public class Barang {
 
+    private Boolean keranjang;
+    public Boolean getKeranjang() {
+        return keranjang;
+    }
+    public void setKeranjang(Boolean keranjang) {
+        this.keranjang = keranjang;
+    }
+    private String KategoriBarang;
     private String namaBarang;
+    public String getKategoriBarang() {
+        return KategoriBarang;
+    }
+    public void setKategoriBarang(String kategoriBarang) {
+        KategoriBarang = kategoriBarang;
+    }
     private String kondisiBarang;
     private String hargaBarang;
     public String getNamaBarang() {
