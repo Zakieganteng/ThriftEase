@@ -14,7 +14,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Beranda.BerandaController">
    <children>
-      <ScrollPane fx:id="beranda" prefHeight="740.0" prefWidth="1150.0" visible="false">
+      <ScrollPane fx:id="beranda" prefHeight="740.0" prefWidth="1150.0">
         <content>
           <AnchorPane focusTraversable="true" minHeight="0.0" minWidth="0.0" prefHeight="1286.0" prefWidth="1145.0" style="-fx-background-color: white;">
                <children>
@@ -518,7 +518,7 @@
             </AnchorPane>
          </content>
       </ScrollPane>
-      <ScrollPane fx:id="halshirt" prefHeight="740.0" prefWidth="1150.0">
+      <ScrollPane fx:id="halshirt" prefHeight="740.0" prefWidth="1150.0" visible="false">
          <content>
             <AnchorPane focusTraversable="true" minHeight="0.0" minWidth="0.0" prefHeight="1391.0" prefWidth="1157.0" style="-fx-background-color: white;">
                <children>
