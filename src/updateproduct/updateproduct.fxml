@@ -11,14 +11,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="updateproduct.updatecontroller">
    <children>
       <ImageView fitHeight="656.0" fitWidth="1167.0" opacity="0.12" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Project%20Besar%20FPA/src/Foto-Foto/987d4333b0e6bf36ff12b4e82755aadc.jpg" />
          </image>
       </ImageView>
-      <RadioButton fx:id="RBshirt" layoutX="719.0" layoutY="360.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Shirt">
+      <RadioButton  layoutX="719.0" layoutY="360.0" mnemonicParsing="false" onAction="#radiochoose" prefHeight="40.0" prefWidth="146.0" text="Shirt">
          <font>
             <Font size="18.0" />
          </font>
@@ -26,27 +26,27 @@
             <ToggleGroup fx:id="category" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="RBsweater" layoutX="719.0" layoutY="399.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Sweater" toggleGroup="$category">
+      <RadioButton  layoutX="719.0" layoutY="399.0" mnemonicParsing="false" onAction="#radiochoose" prefHeight="40.0" prefWidth="146.0" text="Sweater" toggleGroup="$category">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="RBjacket" layoutX="719.0" layoutY="440.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Jacket" toggleGroup="$category">
+      <RadioButton  layoutX="719.0" layoutY="440.0" mnemonicParsing="false" onAction="#radiochoose" prefHeight="40.0" prefWidth="146.0" text="Jacket" toggleGroup="$category">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="RBskirt" layoutX="870.0" layoutY="440.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Skirt" toggleGroup="$category">
+      <RadioButton  layoutX="870.0" layoutY="440.0" mnemonicParsing="false" onAction="#radiochoose" prefHeight="40.0" prefWidth="146.0" text="Skirt" toggleGroup="$category">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="RBlongpants" layoutX="870.0" layoutY="400.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Long Pants" toggleGroup="$category">
+      <RadioButton  layoutX="870.0" layoutY="400.0" mnemonicParsing="false" onAction="#radiochoose" prefHeight="40.0" prefWidth="146.0" text="Long Pants" toggleGroup="$category">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="RBshortpants" layoutX="870.0" layoutY="360.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="146.0" text="Short Pants" toggleGroup="$category">
+      <RadioButton  layoutX="870.0" layoutY="360.0" mnemonicParsing="false" onAction="#radiochoose" prefHeight="40.0" prefWidth="146.0" text="Short Pants" toggleGroup="$category">
          <font>
             <Font size="18.0" />
          </font>
@@ -59,7 +59,7 @@
       <TextField fx:id="name" layoutX="203.0" layoutY="161.0" prefHeight="36.0" prefWidth="241.0" />
       <TextField fx:id="price" layoutX="203.0" layoutY="351.0" prefHeight="36.0" prefWidth="241.0" />
       <ChoiceBox fx:id="kondisi" layoutX="727.0" layoutY="161.0" prefHeight="36.0" prefWidth="241.0" />
-      <Button fx:id="add" layoutX="472.0" layoutY="549.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="203.0" text="Add Product">
+      <Button fx:id="add" layoutX="472.0" layoutY="549.0" mnemonicParsing="false" onAction="#tambahdata" prefHeight="58.0" prefWidth="203.0" text="Add Product">
          <font>
             <Font name="Bell MT Bold" size="22.0" />
          </font>

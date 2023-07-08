@@ -17,24 +17,86 @@ import Database.Barang;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 public class updatecontroller implements Initializable {
+
+        @FXML
+    private RadioButton RBjacket;
+
+    @FXML
+    private RadioButton RBlongpants;
+
+    @FXML
+    private RadioButton RBshirt;
+
+    @FXML
+    private RadioButton RBshortpants;
+
+    @FXML
+    private RadioButton RBskirt;
+
+    @FXML
+    private RadioButton RBsweater;
+
+    @FXML
+    private Button add;
+
+    @FXML
+    private ToggleGroup category;
+
+    @FXML
+    private ChoiceBox<String> kondisi;
+
+    @FXML
+    private TextField name;
+
+    @FXML
+    private TextField price;
 
 
     @FXML
     private void tambahdata(ActionEvent event){
         Barang tambahnew = new Barang();
-        tambahnew.setNamaBarang();
+        tambahnew.setNamaBarang(name.getText());
 
-        tambahnew.setKondisiBarang();
-        tambahnew.setKategoriBarang();
+        tambahnew.setKondisiBarang(kondisi.getValue());
+        tambahnew.setKategoriBarang(categ);
         tambahnew.setKeranjang(false);
-        tambahnew.setHargaBarang("Rp. " +);
+        tambahnew.setHargaBarang("Rp. " + price.getText());
 
         barang.getThriftEaseBarang().add(tambahnew);
 
         xmlupdate();
+
+        // String kateg = event.getSource().toString();
+        // int panjang = kateg.length();
+        // System.out.println(kateg);
+    }
+
+    String categ = "";
+    @FXML
+    private void radiochoose(ActionEvent event){
+        // Barang tambahnew = new Barang();
+        // tambahnew.setNamaBarang(name.getText());
+
+        // tambahnew.setKondisiBarang(kondisi.getValue());
+        // tambahnew.setKategoriBarang(event.getSource().toString().substring(0, 0));
+        // tambahnew.setKeranjang(false);
+        // tambahnew.setHargaBarang("Rp. " + price.getText());
+
+        // barang.getThriftEaseBarang().add(tambahnew);
+
+        // xmlupdate();
+
+        String kateg = event.getSource().toString();
+        int panjang = kateg.length();
+        System.out.println(kateg.substring(46, panjang-1));
+        categ = kateg.substring(46, panjang-1);
     }
 
     
@@ -127,5 +189,7 @@ public class updatecontroller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         updatebarang();
+
+        kondisi.getItems().addAll("Very Good","Good","Well");
     }
 }
