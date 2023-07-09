@@ -26,11 +26,11 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button layoutX="74.0" layoutY="514.0" mnemonicParsing="false" onAction="#deleteRow" prefHeight="40.0" prefWidth="165.0" text="Deleted from list">
+      <Button layoutX="74.0" layoutY="514.0" mnemonicParsing="false" onAction="#deleteRow" prefHeight="40.0" prefWidth="165.0" text="Deleted from list" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-      <Button fx:id="CO" layoutX="902.0" layoutY="514.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Check Out">
+      <Button fx:id="CO" layoutX="902.0" layoutY="514.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="180.0" text="Check Out" textFill="WHITE">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
